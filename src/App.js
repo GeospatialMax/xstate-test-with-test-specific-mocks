@@ -10,21 +10,22 @@ import { appMachine } from "./AppMachine";
 export default function App() {
   const { status, data } = useQuery("myQueryKey", loadData);
 
+  const [machineState, sendToMachine] = useMachine(appMachine);
+  
   useEffect(() => {
     if (status === "success") {
       sendToMachine("DATA_RECEIVED", { data });
     }
   }, [status, data]);
 
-  const [machineState, sendToMachine] = useMachine(appMachine);
 
   return (
     <div className="App">
       {machineState.matches("initialising") && (
-        <div id="loadingIndicator">data loading...</div>
+        <div data-testid="loadingIndicator">data loading...</div>
       )}
       {machineState.matches("ready") && (
-        <div id="data">{machineState.context.data}</div>
+        <div data-testid="data">{machineState.context.data}</div>
       )}
       <p>
         status: {status}; machineState: {machineState.value}
