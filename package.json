@@ -1,0 +1,39 @@
+{
+  "name": "xstate-test-with-test-specific-mocks",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "@testing-library/react": "11.0.2",
+    "@xstate/react": "0.8.1",
+    "@xstate/test": "0.4.1",
+    "enzyme": "3.11.0",
+    "enzyme-adapter-react-16": "1.15.4",
+    "jest": "26.4.2",
+    "jest-enzyme": "7.1.2",
+    "jest-mock": "26.3.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-query": "2.15.4",
+    "react-query-devtools": "2.4.7",
+    "react-scripts": "3.4.3",
+    "react-test-renderer": "16.13.1",
+    "xstate": "4.13.0"
+  },
+  "devDependencies": {
+    "typescript": "3.8.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
