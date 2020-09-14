@@ -6,12 +6,13 @@ This repository demonstrates how test-specific mocks can be implemented based on
 
 In this specific setup we have an application that:
 
-* is based around xstate state machines
+* is based around xstate state machines (see [AppMachine.js](https://github.com/GeospatialMax/xstate-test-with-test-specific-mocks/blob/master/src/AppMachine.js) for the state machine)
 * has an initial state name `initialising`
 * moves from that state to `ready` as soon as the first data is received
-* loads data using react-query
+* loads data using react-query (see [App.js](https://github.com/GeospatialMax/xstate-test-with-test-specific-mocks/blob/master/src/App.js))
 
 The approach for testing the application is:
+(see [app.test.js](https://github.com/GeospatialMax/xstate-test-with-test-specific-mocks/blob/master/src/App.test.js) for implementation)
 
 * define a test machine
 * define test events where the `DATA_RECEIVED` event receives multiple cases (i.e. multiple data returns)
